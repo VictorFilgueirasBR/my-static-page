@@ -1,0 +1,67 @@
+.description-card-container {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color */
+  font-family: 'Outfit', sans-serif; /* Use Outfit font, fallback to sans-serif */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Adjust as needed */
+  width: 100%;
+  margin-top: 30px; /* Space from the previous component/title */
+  line-height: 1.6;
+
+  /* New properties for height control and scrollability */
+  max-height: 70vh; /* Maximum height of 70% of viewport height */
+  overflow-y: auto; /* Adds scrollbar if content exceeds max-height */
+  box-sizing: border-box; /* Ensures padding is included in max-height calculation */
+}
+
+.description-card-title {
+  font-size: 1.6em; /* Slightly reduced font size for title */
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333333; /* Slightly softer black for titles */
+}
+
+.description-card-container h3 {
+  font-size: 1.2em; /* Slightly reduced font size for subheadings */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444444; /* Slightly softer black for subheadings */
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+.description-card-container p {
+  margin-bottom: 10px;
+  font-size: 0.9rem; /* Adjusted to 0.9rem for general paragraphs */
+  line-height: 1.5; /* Slightly adjusted line height */
+}
+
+.description-card-container ul {
+  margin-bottom: 10px;
+  padding-left: 20px; /* Indent list items */
+}
+
+.description-card-container li {
+  margin-bottom: 5px;
+  font-size: 0.85rem; /* Adjusted for list items */
+}
+
+.description-card-container strong {
+  font-weight: 600;
+}
+
+.highlight-price {
+  color: #e67e22; /* Use the same orange as the product card for consistency */
+  font-weight: bold;
+  font-size: 1.1em; /* Slightly reduced highlight price size */
+}
+
+.contact-call-to-action {
+  text-align: center;
+  font-style: italic;
+  margin-top: 25px;
+  font-size: 0.9rem; /* Adjusted for contact call to action */
+  color: #555555;
+}

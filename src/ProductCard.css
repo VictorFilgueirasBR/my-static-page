@@ -1,0 +1,246 @@
+/* ===== Correção Global para evitar overflow horizontal ===== */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  background-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Container principal refinado ===== */
+.product-card-container {
+  background: #111111; /* Tom escuro com leve cinza */
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.04), 0 0 12px rgba(206, 178, 97, 0.05);
+  padding: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.product-card-container:hover {
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.08), 0 0 18px rgba(206, 178, 97, 0.1);
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+
+/* ===== Badge de promoção refinada ===== */
+.product-card-container::before {
+  content: "OFERTA LIMITADA";
+  position: absolute;
+  top: 16px;
+  right: -38px;
+  background: #ff4d00;
+  color: #fff;
+  padding: 6px 48px;
+  transform: rotate(45deg);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  z-index: 2;
+}
+
+/* ===== Seção da imagem ===== */
+.product-image-section {
+  position: relative;
+  text-align: center;
+  flex: 1; /* Allows it to take available space */
+  min-width: 300px; /* Minimum width before wrapping */
+}
+
+.product-image {
+  border-radius: 12px;
+  width: 100%;
+  max-height: 250px; 
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-card-container:hover .product-image {
+  transform: scale(1.03);
+}
+
+/* Botões de navegação */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  transition: background 0.3s ease;
+}
+
+.slider-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.left-arrow { left: 10px; }
+.right-arrow { right: 10px; }
+
+/* Ícone de lupa */
+.magnify-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* ===== Seção de detalhes refinada ===== */
+.product-details-section {
+  margin-top: 20px;
+}
+
+.product-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+  transition: color 0.4s ease;
+}
+
+.product-title:hover {
+  color: #ceb261;
+  transform: scale(1.05);
+}
+
+/* Descrição com tom mais quente e legível */
+.product-description {
+  font-size: 0.7rem;
+  color: #d6cba0;
+  line-height: 0;
+  margin-bottom: 15px;
+}
+
+/* Preços */
+.product-prices {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.struck-price {
+  color: #888;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ceb261;
+}
+
+/* ===== Botão de contato refinado ===== */
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff4d00, #e64400);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  gap: 8px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  animation: pulse 2.5s infinite;
+  border: none;
+  box-shadow: 0 4px 12px rgba(255,77,0, 0.2);
+}
+
+.contact-button:hover {
+  background: linear-gradient(135deg, #ff6a26, #ff4d00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255,77,0, 0.35);
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, transparent 60%);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.contact-button:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+.whatsapp-icon {
+  font-size: 1.2rem;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,77,0, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(255,77,0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,77,0, 0); }
+}
+
+/* ===== Badge de promoção animado ===== */
+.product-card-container::before {
+  content: "OFERTA LIMITADA";
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  background: linear-gradient(135deg, #ff4d00, #e64400);
+  color: #fff;
+  padding: 5px 50px;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  max-width: 100%;
+  box-shadow: 0 0 8px rgba(255, 77, 0, 0.6);
+  animation: pulse-glow 2.5s ease-in-out infinite, shake-slight 4s infinite;
+  z-index: 2;
+}
+
+/* ===== Animação de brilho pulsante ===== */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 6px rgba(255, 77, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 77, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(255, 77, 0, 0.4);
+  }
+}
+
+/* ===== Animação de leve oscilação ===== */
+@keyframes shake-slight {
+  0%, 100% { transform: rotate(45deg) translateX(0); }
+  25% { transform: rotate(45deg) translateX(1px); }
+  50% { transform: rotate(45deg) translateX(0); }
+  75% { transform: rotate(45deg) translateX(-1px); }
+}
+

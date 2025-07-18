@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ProductCard from './ProductCard'; // Import the new ProductCard component
+import DescriptionCard from './DescriptionCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1 className="main-title">BRADOCK GUN'S</h1>
+      <div className="component-placeholder">
+        {/* Your ProductCard component will go here */}
+        <ProductCard />
+        <DescriptionCard />
+      </div>
     </div>
   );
 }

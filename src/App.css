@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+/* Global font setting for the entire page */
+html, body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* This might not be ideal if content is taller than viewport, consider align-items: flex-start for top alignment */
+  min-height: 100vh; /* Occupy full viewport height */
+  background-color: #000000; /* Black background */
+  font-family: 'Outfit', sans-serif; /* Ensure Outfit font is applied here */
+  padding: 0.5rem; /* Changed padding to 0.5rem as requested */
+  box-sizing: border-box; /* Include padding in element's total width and height */
 }
 
-.App-link {
-  color: #61dafb;
+.main-title {
+  color: #FAFAFA; /* Light gray color for title */
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem; /* Changed font size */
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #FAFAFA; /* Changed underline color */
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.component-placeholder {
+  background-color: #000000; /* Black background */
+  border: 0; /* Removed border */
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow (might be less visible on black) */
+  text-align: center; /* This centers the content within the placeholder */
+  /* Removed max-width: 600px to allow inner components to dictate width */
+  width: 100%; /* Ensure it takes full width of its container */
+  display: flex; /* Use flexbox to arrange inner components */
+  flex-direction: column; /* Stack them vertically */
+  align-items: center; /* Center items horizontally within the placeholder */
+  gap: 30px; /* Add space between the ProductCard and DescriptionCard */
+}
+
+.component-placeholder p {
+  color: #AAAAAA; /* Changed color to be visible on black background */
+  font-size: 1.1em;
+  line-height: 1.6;
 }
