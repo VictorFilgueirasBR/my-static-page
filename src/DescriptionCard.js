@@ -33,7 +33,7 @@ function DescriptionCard() {
 
       <h3>Preço e Condição:</h3>
       <p>
-        Enquanto o preço de mercado para um conjunto similar varia entre R$ 6.500 e R$ 8.000, estou oferecendo este pacote completo por apenas <strong className="highlight-price">R$ 5.500</strong>.
+        Enquanto o preço de mercado para um conjunto similar varia entre R$ 6.500 e R$ 8.000, estou oferecendo este pacote completo por apenas <strong className="highlight-price">R$ 5.750</strong>.
       </p>
       <p>
         Uma oportunidade imperdível considerando o estado da arma e o valor dos brindes inclusos!
