@@ -3,25 +3,45 @@ html, body {
   font-family: 'Outfit', sans-serif;
   margin: 0; /* Remove default body margin */
   padding: 0; /* Remove default body padding */
+  overflow-x: hidden !important; /* Ensure no horizontal scrollbar from elements */
+  max-width: 100vw; /* Ensure content fits within viewport width */
+  background-color: #000; /* Also set body background for full coverage */
+}
+
+* {
+  box-sizing: border-box; /* Global box-sizing for consistent layout */
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* This might not be ideal if content is taller than viewport, consider align-items: flex-start for top alignment */
+  /* For very tall content, consider align-items: flex-start; instead of justify-content: center; */
+  /* min-height: 100vh; is fine if content is usually shorter than viewport */
   min-height: 100vh; /* Occupy full viewport height */
   background-color: #000000; /* Black background */
   font-family: 'Outfit', sans-serif; /* Ensure Outfit font is applied here */
-  padding: 0.5rem; /* Changed padding to 0.5rem as requested */
+  padding: 0.5rem; /* Base padding for all screens, as previously requested */
   box-sizing: border-box; /* Include padding in element's total width and height */
+  width: 100%; /* Ensure container takes full width */
 }
+
+/* Media Query for Notebooks/PCs (screens wider than, for example, 992px) */
+@media (min-width: 992px) {
+  .app-container {
+    /* Apply 25vh padding to left and right only on larger screens */
+    padding-left: 70vh;
+    padding-right: 70vh;
+    /* This will push the content inwards from the sides, creating empty space */
+  }
+}
+
 
 .main-title {
   color: #FAFAFA; /* Light gray color for title */
   font-family: 'Outfit', sans-serif;
   font-size: 1.8rem; /* Changed font size */
-  font-weight: 900;
+  font-weight: 900; /* Added font-weight: 900 */
   margin-bottom: 30px;
   text-align: center;
   border-bottom: 2px solid #FAFAFA; /* Changed underline color */
@@ -35,7 +55,6 @@ html, body {
   padding: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow (might be less visible on black) */
   text-align: center; /* This centers the content within the placeholder */
-  /* Removed max-width: 600px to allow inner components to dictate width */
   width: 100%; /* Ensure it takes full width of its container */
   display: flex; /* Use flexbox to arrange inner components */
   flex-direction: column; /* Stack them vertically */

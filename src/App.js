@@ -6,7 +6,7 @@ import DescriptionCard from './DescriptionCard';
 function App() {
   return (
     <div className="app-container">
-      <h1 className="main-title">BRADOCK GUN'S</h1>
+      <h1 className="main-title">BRADOCK'S GUNS</h1>
       <div className="component-placeholder">
         {/* Your ProductCard component will go here */}
         <ProductCard />

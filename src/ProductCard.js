@@ -37,7 +37,7 @@ function ProductCard() {
         <button className="slider-button right-arrow" onClick={goToNextImage}>
           &#8250;
         </button>
-        <div className="magnify-icon">&#128269;</div>
+        {/* REMOVED: <div className="magnify-icon">&#128269;</div> */}
       </div>
 
       <div className="product-details-section">
@@ -52,11 +52,10 @@ function ProductCard() {
           <span className="struck-price">R$7.500,00</span>
           <span className="current-price">R$5.750,00</span>
         </div>
-        {/* Changed from <button> to <a> tag with href and target="_blank" */}
-        <a 
-          href="https://wa.me/message/WQS3YHS6QHS2I1" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://wa.me/message/WQS3YHS6QHS2I1"
+          target="_blank"
+          rel="noopener noreferrer"
           className="contact-button"
         >
           <FaWhatsapp className="whatsapp-icon" />
